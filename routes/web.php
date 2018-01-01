@@ -19,3 +19,7 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
+
+Route::get('/post', function () {
+    return 1;
+})->name('post');

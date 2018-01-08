@@ -18,12 +18,12 @@
                 @foreach($posts as $post)
                 <a href="{{ url('post/'.$post->id) }}">
                     <h2 class="post-title">{{ $post->title }}</h2>
-                    <h3 class="post-subtitle">
-                       {!! str_limit($post->body, 100, '...') !!}
+                    <h3 class="post-subtitle"><small> {!! str_limit($post->body, 100, '...') !!}</small>
+
                     </h3>
                 </a>
-                <p class="post-meta">Posted by Yarotska Yuliana
-                    on {{ $post->created_at }}</p>
+                <p class="post-meta"><small>Posted by Yarotska Yuliana
+                        on {{ $post->created_at }}</small></p>
                     @endforeach
             </div>
             <hr>

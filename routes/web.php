@@ -28,3 +28,11 @@ route::get('contacts', function () {
 
 Route::get('categories', 'CategoryController@index')->name('categories');
 Route::get('/category/{id}', 'CategoryController@show');
+
+Route::get('about', function() {
+    return view('user.about');
+})->name('about');
+
+Route::get('contacts', function() {
+    return view('user.contacts');
+})->name('contacts');

@@ -25,3 +25,6 @@ Route::get('/post/{id}', 'PostController@index')->name('post');
 route::get('contacts', function () {
     return view('user.contacts');
 });
+
+Route::get('categories', 'CategoryController@index')->name('categories');
+Route::get('/category/{id}', 'CategoryController@show');

@@ -4,8 +4,8 @@
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Home</h1>
-                    <span class="subheading">My silent cosy blog. Welcome.</span>
+                    <h1>Wilmersdorf</h1>
+                    <span class="subheading">Literature, philosophy and everyday life. Welcome.</span>
                 </div>
             </div>
         </div>

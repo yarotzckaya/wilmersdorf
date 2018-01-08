@@ -8,16 +8,15 @@
 <!-- Navigation -->
 @include('user.layouts.nav')
 <!-- Page Header -->
-<header class="masthead" style="background-image: url({{ $post->image }})">
+<header class="masthead" style="background-image: url('../../../public/user/img/888.jpg')">
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="post-heading">
-                    <h1>{!! $post->title !!}</h1><br>
-                    <span class="meta">Posted by
-                {{ 'Yarotska Yuliana' }}
-                on {{ $post->created_at }}</span>
+                    <h1>{!! 'Contacts' !!}</h1><br>
+
+
                 </div>
             </div>
         </div>
@@ -27,13 +26,11 @@
 <!-- Post Content -->
 <article>
     <div class="container">
-        <div class="row"><small>category</small><span>{{ $cat_id }}</span>
-            <div class="col-lg-8 col-md-10 mx-auto">
-                <p>
-                    {!! $post->body !!}
-              </p>
-            </div>
-        </div>
+        <p>
+           <h3>Skype:</h3>  yarotzckaya.yuliana<br>
+           <h3>Email:</h3>  yarotzckaya.yuliana@yandex.ua
+        </p>
+
     </div>
 </article>
 

@@ -14,19 +14,20 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-preview">
-                <a href="{{ route('post') }}">
-                    <h2 class="post-title">
-                        Man must explore, and this is exploration at its greatest
-                    </h2>
+                <?php $posts = \Illuminate\Support\Facades\DB::table('posts')->orderBy('created_at', 'desc')->get() ?>
+                @foreach($posts as $post)
+                <a href="{{ url('post/'.$post->id) }}">
+                    <h2 class="post-title">{{ $post->title }}</h2>
                     <h3 class="post-subtitle">
-                        Problems look mighty small from 150 miles up
+                       {!! str_limit($post->body, 100, '...') !!}
                     </h3>
                 </a>
-                <p class="post-meta">Posted by
-                    <a href="#">Start Bootstrap</a>
-                    on September 24, 2017</p>
+                <p class="post-meta">Posted by Yarotska Yuliana
+                    on {{ $post->created_at }}</p>
+                    @endforeach
             </div>
             <hr>
+
 
             <hr>
             <!-- Pager -->

@@ -13,13 +13,15 @@
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/post', function () {
-    return 1;
-})->name('post');
+Route::get('/post/{id}', 'PostController@index')->name('post');
+
+route::get('contacts', function () {
+    return view('user.contacts');
+});

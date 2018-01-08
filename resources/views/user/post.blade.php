@@ -27,7 +27,8 @@
 <!-- Post Content -->
 <article>
     <div class="container">
-        <div class="row"><small>category</small><span>{{ $cat_id }}</span>
+        <div class="row"><small>category:</small>&nbsp;
+            <span>{{ $cat_id }}</span>
             <div class="col-lg-8 col-md-10 mx-auto">
                 <p>
                     {!! $post->body !!}

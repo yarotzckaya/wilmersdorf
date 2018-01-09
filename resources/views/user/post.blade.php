@@ -61,21 +61,21 @@
         <div class="control-group">
             <div class="form-group floating-label-form-group controls">
                 <label>Комментарий</label>
-                <textarea rows="5" class="form-control" placeholder="Text..." id="body" name="body" required data-validation-required-message="Please enter a message."></textarea>
+                <textarea rows="5" class="form-control" placeholder="Teкст..." id="body" name="body" required data-validation-required-message="Please enter a message."></textarea>
                 <p class="help-block text-danger"></p>
             </div>
         </div>
         <br>
         <div id="success"></div>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
+            <button type="submit" class="btn btn-primary" id="sendMessageButton">Отправить</button>
             @include('user.layouts.errors')
         </div>
 
 
     </form>
         <div class="d-block col-lg-12 col-md-10 mx-auto" style="margin: 20px 20px 20px 20px; padding: 20px 20px 20px 20px; ">
-            <?php $comments = App\Comment::where('post_id', '=', $post->id)->get(); ?>
+            <?php $comments = App\Comment::where('post_id', '=', $post->id)->orderBy('id', 'DESC')->get(); ?>
             @foreach($comments as $comment)
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">

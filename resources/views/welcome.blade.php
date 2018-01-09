@@ -31,11 +31,11 @@
 
             <hr>
             <!-- Pager -->
-            <div class="clearfix" style=".li {
+            <div class="clearfix">
+                <div class="pagination" style="display: grid; color: #0e3950;">
+                    {{ $posts->links() }}
+                </div>
 
-                background-color: red;
-            }">
-                {{ $posts->links() }}
                 <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
             </div>
         </div>

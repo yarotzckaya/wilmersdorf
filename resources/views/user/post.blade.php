@@ -17,7 +17,7 @@
                     <h1>{!! $post->title !!}</h1><br>
                     <small class="meta">Posted by
                         {{ 'Yarotska Yuliana' }}
-                        on {{ $post->created_at }}</small>
+                        on {{ date('d.m.Y', strtotime($post->created_at))}}</small>
                 </div>
             </div>
         </div>

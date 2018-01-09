@@ -21,7 +21,8 @@
                     <h3 class="post-subtitle"><small> {!! str_limit($post->body, 100, '...') !!}</small></h3>
 
                 <p class="post-meta"><small>Posted by Yarotska Yuliana
-                        on {{ $post->created_at }}</small></p><br>
+
+                        on {{ date('d.m.Y', strtotime($post->created_at)) }}</small></p><br>
                     @endforeach
             </div>
             <hr>

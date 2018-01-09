@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,7 @@
 */
 
 Route::get('/', function () {
+    setlocale(LC_TIME, '');
     return view('welcome');
 })->name('welcome');
 

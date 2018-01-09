@@ -9,9 +9,13 @@
 @include('user.layouts.nav')
 <!-- Page Header -->
 {{--<header class="masthead" style="background-image: url("{{ url('/public/storage/posts/January2018/'.$post->image) }}")">--}}
+@if($post->image !== null)
 <header class="masthead" style="background-image: url('{{ asset('storage/'.$post->image) }}')">
+    @else
+        <header class="masthead" style="background-image: url('{{ asset('user/img/default-post.jpg') }}')">
+@endif
 
-    <div class="overlay"></div>
+        <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">

@@ -8,15 +8,15 @@
         @endif
 
         {{-- Pagination Elements --}}
-        @foreach ($elements as $element)
+        @foreach ($posts as $post)
             {{-- "Three Dots" Separator --}}
-            @if (is_string($element))
-                <a class="icon item disabled">{{ $element }}</a>
+            @if (is_string($post))
+                <a class="icon item disabled">{{ $post }}</a>
             @endif
 
             {{-- Array Of Links --}}
-            @if (is_array($element))
-                @foreach ($element as $page => $url)
+            @if (is_array($post))
+                @foreach ($post as $page => $url)
                     @if ($page == $paginator->currentPage())
                         <a class="item active" href="{{ $url }}">{{ $page }}</a>
                     @else

@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-preview">
-                <?php $posts = \Illuminate\Support\Facades\DB::table('posts')->orderBy('created_at', 'desc')->paginate(2) ?>
+                <?php $posts = \Illuminate\Support\Facades\DB::table('posts')->orderBy('created_at', 'desc')->simplePaginate(2) ?>
                 @foreach($posts as $post)
                 <a href="{{ url('post/'.$post->id) }}">
                     <h2 class="post-title">{{ $post->title }}</h2>
@@ -32,11 +32,9 @@
             <hr>
             <!-- Pager -->
             <div class="clearfix">
-                <div class="pagination" style="display: grid; color: #0e3950;">
-                    {{ $posts->links() }}
+                <div class="pager">
+                    &nbsp; {{ $posts->links('vendor.pagination.simple-bootstrap-4') }}
                 </div>
-
-                <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
             </div>
         </div>
     </div>

@@ -8,7 +8,9 @@
 <!-- Navigation -->
 @include('user.layouts.nav')
 <!-- Page Header -->
-<header class="masthead" style="background-image: url({{ $post->image }})">
+{{--<header class="masthead" style="background-image: url("{{ url('/public/storage/posts/January2018/'.$post->image) }}")">--}}
+<header class="masthead" style="background-image: url('{{ asset('storage/'.$post->image) }}')">
+
     <div class="overlay"></div>
     <div class="container">
         <div class="row">

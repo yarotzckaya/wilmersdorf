@@ -38,3 +38,5 @@ Route::get('about', function() {
 Route::get('contacts', function() {
     return view('user.contacts');
 })->name('contacts');
+
+Route::resource('comment', 'CommentController');

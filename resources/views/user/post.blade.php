@@ -15,9 +15,9 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="post-heading">
                     <h1>{!! $post->title !!}</h1><br>
-                    <span class="meta">Posted by
-                {{ 'Yarotska Yuliana' }}
-                on {{ $post->created_at }}</span>
+                    <small class="meta">Posted by
+                        {{ 'Yarotska Yuliana' }}
+                        on {{ $post->created_at }}</small>
                 </div>
             </div>
         </div>
@@ -28,8 +28,10 @@
 <article>
     <div class="container">
         <div class="row"><small>category:</small>&nbsp;
-            <span>{{ $cat_id }}</span>
+            <span>{{ $cat_id }}</span><br>
+
             <div class="col-lg-8 col-md-10 mx-auto">
+
                 <p>
                     {!! $post->body !!}
               </p>

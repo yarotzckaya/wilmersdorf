@@ -14,16 +14,14 @@
     <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-preview">
-                <?php $posts = \Illuminate\Support\Facades\DB::table('posts')->orderBy('created_at', 'desc')->simplePaginate(2) ?>
+                <?php $posts = \Illuminate\Support\Facades\DB::table('posts')->orderBy('created_at', 'desc')->simplePaginate(10) ?>
                 @foreach($posts as $post)
                 <a href="{{ url('post/'.$post->id) }}">
-                    <h2 class="post-title">{{ $post->title }}</h2>
-                    <h3 class="post-subtitle"><small> {!! str_limit($post->body, 100, '...') !!}</small>
+                    <h2 class="post-title">{{ $post->title }}</h2></a>
+                    <h3 class="post-subtitle"><small> {!! str_limit($post->body, 100, '...') !!}</small></h3>
 
-                    </h3>
-                </a>
                 <p class="post-meta"><small>Posted by Yarotska Yuliana
-                        on {{ $post->created_at }}</small></p>
+                        on {{ $post->created_at }}</small></p><br>
                     @endforeach
             </div>
             <hr>

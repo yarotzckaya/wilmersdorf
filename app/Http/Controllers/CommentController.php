@@ -36,9 +36,9 @@ class CommentController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'username' => 'required|max:100',
-            'email' => 'required|max:100',
-            'body' => 'required|max:3000'
+            'username' => 'required|min:3|max:100',
+            'email' => 'required|email|max:100',
+            'body' => 'required|min:5|max:3000'
         ]);
 
         $comment = new Comment();

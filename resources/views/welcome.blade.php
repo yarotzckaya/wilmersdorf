@@ -18,7 +18,7 @@
                 @foreach($posts as $post)
                 <a href="{{ url('post/'.$post->id) }}">
                     <h2 class="post-title">{{ $post->title }}</h2></a>
-                    <h3 class="post-subtitle"><small> {!! str_limit($post->body, 150, '...') !!}</small></h3>
+                    <h3 class="post-subtitle"><small style="font-family: 'Noto Sans Hanunoo'; font-size: 18px; line-height: 1;"> {!! str_limit($post->body, 150, '...') !!}</small></h3>
 
                 <p class="post-meta"><small>Posted by Yarotska Yuliana
 

@@ -4,12 +4,12 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-clean-blog/blob/master/LICENSE)
  */
 body {
-  font-size: 20px;
+  font-size: 18px;
   color: #212529;
   font-family: 'Lora', 'Times New Roman', serif; }
 
 p {
-  line-height: 1.5;
+  line-height: 1;
   margin: 30px 0; }
   p a {
     text-decoration: underline; }
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 800;
+  font-weight: 600;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
 
 a {

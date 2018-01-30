@@ -33,22 +33,33 @@
 
                     <?php
                     $posts_cat = \Illuminate\Support\Facades\DB::table('posts')->where('category_id', '=', $category->id)->take(10)->get();?>
-                <ul>
-                    @if($posts_cat != "[]")
 
-                    @foreach ($posts_cat as $post)
-                       <li><small><a href="{{ url('post/'.$post->id) }}"> {{ $post->title }}</a></small></li>
-                    @endforeach{{ "..." }}
-                        @else
-                        <p style="color: grey">Здесь пока пусто.</p>
+                        @if($posts_cat != "[]")
+                            <ol type="1">
+                            @foreach ($posts_cat as $post)
 
-                    @endif
-                </ul>
+                                @if($post->status == 'PUBLISHED')
+                                    <li><a href="{{ url('post/'.$post->id) }}"> {{ $post->title }}</a></li>
+                                    @else
+                                        <small>Здесь пока пусто.</small>
+                                @endif
+
+                            @endforeach
+                                {{ "..." }}
+
+
+                            </ol>
+
+                        @endif
+
+
+
+
 
 
                 @endforeach
 
-            </div>
+
             <hr>
 
 
